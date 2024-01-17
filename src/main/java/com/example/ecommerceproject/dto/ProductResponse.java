@@ -1,9 +1,6 @@
 package com.example.ecommerceproject.dto;
 
-import com.example.ecommerceproject.model.Product;
 import lombok.*;
-
-
 @Getter
 @Setter
 @AllArgsConstructor

@@ -20,15 +20,12 @@ import java.util.stream.Collectors;
 public class ProductServiceImp implements ProductService {
 
     private final ProductRepository productRepository;
-
-
     @Override
     public ResponseEntity<ProductResponse> updateProduct(Long id, UpdateProductRequest updateProductRequest) {
         Product product = productRepository.findById(id).orElseThrow(() -> new RuntimeException("product not found"));
         product = productRepository.save(ProductMapper.mapUpdateProductRequestToProduct(product, updateProductRequest));
         return new ResponseEntity<>(ProductMapper.mapProductResponse(product), HttpStatus.OK);
     }
-
     @Override
     public ResponseEntity<List<ProductResponse>> getAllProducts() {
         List<ProductResponse> product = productRepository.findAll().stream()
@@ -36,28 +33,23 @@ public class ProductServiceImp implements ProductService {
                 .collect(Collectors.toList());
         return new ResponseEntity<>(product, HttpStatus.OK);
     }
-
     @Override
     public ResponseEntity<ProductResponse> getProductById(Long id) {
         Product product = productRepository.findById(id).orElseThrow(() -> new RuntimeException("product not fund"));
         return new ResponseEntity<>(ProductMapper.mapProductResponse(product), HttpStatus.OK);
-
     }
-
     @Override
     public ResponseEntity<String> deleteProduct(Long id) {
         productRepository.deleteById(id);
-        return new ResponseEntity<>("user deleted Successfully", HttpStatus.OK);
+        return new ResponseEntity<>("User deleted Successfully", HttpStatus.OK);
     }
-
     @Override
     public ResponseEntity<Product> saveProduct(ProductRequest productRequest) {
         if (productRepository.existsByName(productRequest.getName())) {
-            throw new RuntimeException("Product with this name already exists");
+            throw new RuntimeException("This Product is already exists");
         }
         Product product = ProductMapper.mapProductRequestToProduct(productRequest);
         Product savedProduct = productRepository.save(product);
-
         return new ResponseEntity<>(savedProduct, HttpStatus.CREATED);
     }
 

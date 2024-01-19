@@ -1,9 +1,9 @@
-package com.example.ecommerceproject.controller;
+package com.example.productServices.controller;
 
-import com.example.ecommerceproject.dto.ProductRequest;
-import com.example.ecommerceproject.dto.ProductResponse;
-import com.example.ecommerceproject.model.Product;
-import com.example.ecommerceproject.service.ProductService;
+import com.example.productServices.dto.ProductRequest;
+import com.example.productServices.dto.ProductResponse;
+import com.example.productServices.model.Product;
+import com.example.productServices.service.ProductService;
 import lombok.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

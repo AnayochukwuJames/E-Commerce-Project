@@ -1,4 +1,4 @@
-package com.example.ecommerceproject.dto;
+package com.example.productServices.dto;
 
 import lombok.*;
 @Getter

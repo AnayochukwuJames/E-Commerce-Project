@@ -1,10 +1,9 @@
-package com.example.ecommerceproject.builder;
+package com.example.productServices.builder;
 
-import com.example.ecommerceproject.dto.ProductRequest;
-import com.example.ecommerceproject.dto.ProductResponse;
-import com.example.ecommerceproject.dto.UpdateProductRequest;
-import com.example.ecommerceproject.model.Product;
-
+import com.example.productServices.dto.ProductRequest;
+import com.example.productServices.dto.ProductResponse;
+import com.example.productServices.dto.UpdateProductRequest;
+import com.example.productServices.model.Product;
 public class ProductMapper {
     public static ProductResponse mapProductResponse(Product productResponse) {
         return ProductResponse.builder()

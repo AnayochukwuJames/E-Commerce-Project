@@ -1,9 +1,9 @@
-package com.example.ecommerceproject.service;
+package com.example.productServices.service;
 
-import com.example.ecommerceproject.dto.ProductRequest;
-import com.example.ecommerceproject.dto.ProductResponse;
-import com.example.ecommerceproject.dto.UpdateProductRequest;
-import com.example.ecommerceproject.model.Product;
+import com.example.productServices.dto.ProductRequest;
+import com.example.productServices.dto.ProductResponse;
+import com.example.productServices.dto.UpdateProductRequest;
+import com.example.productServices.model.Product;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

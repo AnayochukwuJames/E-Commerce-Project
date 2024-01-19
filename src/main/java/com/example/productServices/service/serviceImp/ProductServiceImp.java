@@ -1,12 +1,12 @@
-package com.example.ecommerceproject.service.serviceImp;
+package com.example.productServices.service.serviceImp;
 
-import com.example.ecommerceproject.builder.ProductMapper;
-import com.example.ecommerceproject.dto.ProductRequest;
-import com.example.ecommerceproject.dto.ProductResponse;
-import com.example.ecommerceproject.dto.UpdateProductRequest;
-import com.example.ecommerceproject.model.Product;
-import com.example.ecommerceproject.repository.ProductRepository;
-import com.example.ecommerceproject.service.ProductService;
+import com.example.productServices.builder.ProductMapper;
+import com.example.productServices.dto.ProductRequest;
+import com.example.productServices.dto.ProductResponse;
+import com.example.productServices.dto.UpdateProductRequest;
+import com.example.productServices.model.Product;
+import com.example.productServices.repository.ProductRepository;
+import com.example.productServices.service.ProductService;
 import lombok.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
